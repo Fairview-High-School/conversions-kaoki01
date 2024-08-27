@@ -17,8 +17,10 @@ public class Conversions
         System.out.println("4. Meters to Feet");
         System.out.println("5. Ounces to Milliliters");
         System.out.println("6. Milliliters to Ounces");
-        //Add 2 more conversions, each both ways, to add choices 7, 8, 9, and 10.
-        //You can add even more if you would like.
+        System.out.println("7. Centimeters to Meters");
+        System.out.println("8. Meters to Centimeters");
+        System.out.println("9. Inches to Centimeter");
+        System.out.println("10. Centimeters to Inches");
 
         int selection = keyboard.nextInt();
         keyboard.nextLine();  //go past the endline and be ready for more input
@@ -33,8 +35,75 @@ public class Conversions
         }
         if (selection == 2)
         {
-            //add the code to ask the user to enter Fahrenheit and then convert to Celsius
+            System.out.println("Enter Fahrenheit: ");
+            double fahrenheit = keyboard.nextDouble();
+            keyboard.nextLine();
+            double celsius = (fahrenheit - 32) * (5.0/9.0);
+            System.out.println(fahrenheit + " degrees fahrenheit is " + celsius + " degrees celcius");
         }
-        //add more if statements here.
+        if (selection == 3)
+        {
+            System.out.println("Enter Feet: ");
+            double feet = keyboard.nextDouble();
+            keyboard.nextLine();
+            double meters = feet / 3.28;
+            System.out.println(feet + " feet is " + meters + " meters");
+        }
+        if (selection == 4)
+        {
+            System.out.println("Enter Meters: ");
+            double meters = keyboard.nextDouble();
+            keyboard.nextLine();
+            double feet = meters * 3.28;
+            System.out.println(meters + " meters is " + feet + " feet");
+        }
+        if (selection == 5)
+        {
+            System.out.println("Enter Ounces: ");
+            double ounces = keyboard.nextDouble();
+            keyboard.nextLine();
+            double milliliters = ounces * 29.57;
+            System.out.println(ounces + " ounces is " + milliliters + " milliliters");
+        }
+        if (selection == 6)
+        {
+            System.out.println("Enter Milliliters: ");
+            double milliliters = keyboard.nextDouble();
+            keyboard.nextLine();
+            double ounces = milliliters *0.0338;
+            System.out.println(milliliters + " milliliters is " + ounces + " ounces");
+        }
+        if (selection == 7)
+        {
+            System.out.println("Enter Centimeters: ");
+            double centimeters = keyboard.nextDouble();
+            keyboard.nextLine();
+            double meters = centimeters * 0.01;
+            System.out.println(centimeters + " centimeters is " + meters + " meters");
+        }
+        if (selection == 8)
+        {
+            System.out.println("Enter Meters: ");
+            double meters = keyboard.nextDouble();
+            keyboard.nextLine();
+            double centimeters = meters * 100;
+            System.out.println(meters + " meters is " + centimeters + " centimeters");
+        }
+        if (selection == 9)
+        {
+            System.out.println("Enter Inches: ");
+            double inches = keyboard.nextDouble();
+            keyboard.nextLine();
+            double centimeters = inches * 2.54;
+            System.out.println(inches + " inches is " + centimeters + " centimeters");
+        }
+        if (selection == 10)
+        {
+            System.out.println("Enter Centimeters: ");
+            double centimeters = keyboard.nextDouble();
+            keyboard.nextLine();
+            double inches = centimeters * 0.3937;
+            System.out.println(centimeters + " centimeters is " + inches + " inches");
+        }
     }
 }
